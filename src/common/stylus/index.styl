@@ -1,0 +1,141 @@
+@import '../../common/stylus/mixin.styl';
+@import '../../../node_modules/stylus-px2rem';
+html-font-size = 75px;
+body, html
+  margin: 0
+  padding: 0
+  color: #1D1D1D
+  font-family: "M
+  font-size: 28pxicrosoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", Arial, sans-serif
+  span
+    font-family: "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", Arial, sans-serif
+
+  img[lazy=loading]
+    width: 100%
+    height: 100%
+    background-size: 100% 100%
+    background-repeat: no-repeat
+    bg-image('../../assets/loading')
+
+.float-right
+  float: right
+
+// 最新和视频主页面列表
+.info-list-wrapper
+  height: 218px
+  display: flex
+  box-sizing: border-box
+  padding: 30px 46px 30px 30px
+  border-1px(rgba(226, 226, 226, 0.5))
+  .photo-content
+    flex: 0 0 3.52rem
+    width: 264px
+    height: 158px
+    img, video
+      width: 100%
+      height: 100%
+  .info-content
+    flex: 1
+    box-sizing: border-box
+    margin-top: 17px
+    margin-left: 30px
+    .title
+      height: 84px
+      line-height 42px
+      overflow: hidden
+      margin: 0
+      font-weight: 400
+      font-size: 30px
+      .top-icon
+        display: inline-block
+        vertical-align: middle
+        width: 58px
+        height: 30px
+        margin-right: 10px
+        background-size: 0.77rem 0.4rem
+        background-repeat: no-repeat
+        bg-image('../../assets/top')
+    .info
+      display: flex
+      justify-content: space-between
+      box-sizing: border-box
+      margin-top: 10px
+      font-size: 20px
+      color: #9E9E9E
+
+.icon
+  display: inline-block
+  vertical-align: middle
+  width: 18px
+  height: 17px
+  padding: 0 2px
+  background-size: 0.24rem 0.2266rem
+  background-repeat: no-repeat
+  &.unlike
+    bg-image('../../assets/unlike')
+  &.like
+    bg-image('../../assets/like')
+  &.like-news
+    width: 25px
+    height: 25px
+    background-size: 0.3333rem 0.3333rem
+    bg-image('../../assets/unlikeNews')
+  &.liked-news
+    width: 25px
+    height: 25px
+    background-size: 0.3333rem 0.3333rem
+    bg-image('../../assets/like')
+  &.dislike-news
+    width: 21px
+    height: 25px
+    margin-top: -5px
+    background-size: 0.28rem 0.3333rem
+    bg-image('../../assets/dislikeNews')
+  &.watch
+    width: 22px
+    height: 17px
+    background-size: 0.2933rem 0.2267rem
+    bg-image('../../assets/watch')
+
+.icon-play
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-top: -28px
+  margin-left: -28px
+  width: 56px
+  height: 56px
+  background-size: 0.74667rem 0.74667rem
+  background-repeat: no-repeat
+  bg-image('../../assets/video')
+
+.v-modal
+  opacity: 0.35 !important
+
+.no-more
+  width: 100%
+  padding-top: 20px
+  padding-bottom: 20px
+  text-align: center
+  font-size: 24px
+
+.mint-loadmore-top, .mint-loadmore-bottom
+  font-size: 24px
+
+.mint-navbar
+  &.event-nav
+    color: #9E9E9E
+    .mint-tab-item
+      padding: 27px 0 27px
+      &.is-selected
+        color: #DC6854
+        border-bottom: none
+        text-decoration: none
+      .mint-tab-item-label
+        font-size: 26px
+
+.loading-wrapper
+  margin-top: 435px
+  text-align: center
+  .loading
+    width: 132px
